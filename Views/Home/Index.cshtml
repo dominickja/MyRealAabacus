@@ -1,0 +1,18 @@
+﻿@model MyAbacus.Models.MyAbacusViewModel
+@using (Html.BeginForm("AabacusMath", "Home", FormMethod.Post))
+
+{
+    <h1>My Ababcus </h1>
+    <br />
+    <label>Number 1 : </label>
+    @Html.TextBoxFor(m => m.Number1)
+    <label>Number 2 </label>
+    @Html.TextBoxFor(m=>m.Number2)
+    <Label>Answer </Label>
+    <input type="text" readonly="readonly" value="@Model.Answer" />
+    <br />
+    <input type="submit" value="Submit" />
+    <div>@Html.ValidationSummary(false, "", new {@class = "text-danger"})</div>
+}
+
+
